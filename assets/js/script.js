@@ -15,7 +15,7 @@ $(document).ready(function () {
             document.querySelector('#scroll-top').classList.remove('active');
         }
 
-   // scroll spy
+        // scroll spy
         $('section').each(function () {
             let height = $(this).height();
             let offset = $(this).offset().top - 200;
@@ -29,7 +29,7 @@ $(document).ready(function () {
         });
     });
 
- // smooth scrolling
+    // smooth scrolling
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
@@ -37,8 +37,24 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-});
+    // <!-- emailjs to mail contact form data -->
+    $("#contact-form").submit(function (event) {
+        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
+        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById("contact-form").reset();
+                alert("Form Submitted Successfully");
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert("Form Submission Failed! Try Again");
+            });
+        event.preventDefault();
+    });
+    // <!-- emailjs to mail contact form data -->
+
+});
 
 document.addEventListener('visibilitychange',
     function () {
@@ -48,15 +64,14 @@ document.addEventListener('visibilitychange',
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/vjicon.jpg");
+            $("#vjicon").attr("href", "assets/images/vjicon.jpg");
         }
     });
 
 
-
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "Project Management", "web designing", "android development", "web development"],
+    strings: ["Project Management", "Quality Assurance", "frontend development", "web designing", "web development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -114,14 +129,11 @@ function showProjects(projects) {
     projectsContainer.innerHTML = projectHTML;
 
 
-
-
-// <!-- tilt js effect starts -->
+    // <!-- tilt js effect starts -->
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
         max: 15,
     });
-// <!-- tilt js effect ends -->
-
+    // <!-- tilt js effect ends -->
 
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -132,12 +144,25 @@ function showProjects(projects) {
         reset: true
     });
 
+    /* SCROLL PROJECTS */
+    srtop.reveal('.work .box', { interval: 200 });
+
+}
+
+fetchData().then(data => {
+    showSkills(data);
+});
+
+fetchData("projects").then(data => {
+    showProjects(data);
+});
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
 });
 // <!-- tilt js effect ends -->
+
 
 
 // disable developer mode
@@ -160,6 +185,8 @@ document.onkeydown = function (e) {
 }
 
 
+
+
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
@@ -167,7 +194,6 @@ const srtop = ScrollReveal({
     duration: 1000,
     reset: true
 });
-
 
 /* SCROLL HOME */
 srtop.reveal('.home .content h3', { delay: 200 });
@@ -181,7 +207,6 @@ srtop.reveal('.home .twitter', { interval: 1000 });
 srtop.reveal('.home .telegram', { interval: 600 });
 srtop.reveal('.home .instagram', { interval: 600 });
 srtop.reveal('.home .dev', { interval: 600 });
-
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
@@ -197,6 +222,9 @@ srtop.reveal('.skills .container .bar', { delay: 400 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
+
+/* SCROLL PROJECTS */
+srtop.reveal('.work .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
