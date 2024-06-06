@@ -90,6 +90,7 @@ header .navbar ul li a:hover{
 }
 /* navbar ends */
 
+
 /* hamburger icon starts*/
 #menu{
   font-size: 3rem;
@@ -143,6 +144,8 @@ header .navbar ul li a:hover{
   }
 }
 /* hamburger icon ends */
+
+
 
 /* 404 section start */
 .page_404{ 
@@ -210,6 +213,9 @@ header .navbar ul li a:hover{
   transform: translateX(-8px);
 }
 /* 404 section end */
+
+
+
 
 /* footer section starts */
 .footer{
@@ -315,6 +321,8 @@ header .navbar ul li a:hover{
   }
 }
 /* footer section ends */
+
+
 
 /* common media queries starts*/
 @media(max-width:450px){

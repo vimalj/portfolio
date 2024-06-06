@@ -101,6 +101,8 @@ header .navbar ul li a:hover{
 }
 /* navbar ends */
 
+
+
 /* hamburger icon starts*/
 #menu{
   font-size: 3rem;
@@ -154,6 +156,8 @@ header .navbar ul li a:hover{
   }
 }
 /* hamburger icon ends */
+
+
 
 /* experience section starts */
 .experience {
@@ -324,7 +328,9 @@ header .navbar ul li a:hover{
   }
 }
 /* experience media queries ends */
+
 /* experience section ends */
+
 
 
 /* footer section starts */
@@ -431,6 +437,9 @@ header .navbar ul li a:hover{
   }
 }
 /* footer section ends */
+
+
+
 
 /* common media queries starts*/
 @media(max-width:450px){
