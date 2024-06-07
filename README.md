@@ -1,7 +1,7 @@
 ## Portfolio-Website
 Portfolio website built using HTML5, CSS3, JavaScript, and jQuery.
 
-Contributing Guidelines :
+**Contributing Guidelines :**
 1. Fork this repository.
 
 2. Clone your forked copy of the project.
