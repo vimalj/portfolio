@@ -53,11 +53,11 @@ document.onkeydown = function(e) {
 document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
-        document.title = "Experience | Portfolio Jigar Sable";
-        $("#favicon").attr("href","/assets/images/favicon.png");
+        document.title = "Experience | Portfolio Vimal Jaswal";
+        $("#vjicon").attr("href","/assets/images/vjicon.png");
     }
     else {
         document.title = "Come Back To Portfolio";
-        $("#favicon").attr("href","/assets/images/favhand.png");
+        $("#vjicon").attr("href","/assets/images/vjicon.jpg");
     }
 });
