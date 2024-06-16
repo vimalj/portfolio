@@ -812,27 +812,27 @@ header .navbar ul li a:hover {
   min-height: 60vh;
 }
 .contact .container {
-  max-width: 1050px;
+  max-width: 1000px;
   width: 100%;
   background: #fff;
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  margin: auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 .contact .container .content {
   display: flex;
-  align-items: center;
+  align-items: auto;
   justify-content: space-between;
   padding: 2.5rem 2rem;
 }
 .contact .content .image-box {
-  max-width: 60%;
+  max-width: 50%;
   margin-left: 4rem;
 }
 .contact .content .image-box img {
   width: 160%;
   height: 25rem;
-  position: center;
+  position: auto;
 }
 
 /* contact section ends */
